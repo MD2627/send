@@ -3,11 +3,10 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { Link, Image } from "@shopify/hydrogen";
 function Tabin({ props }) {
- 
   return (
     <>
-      <Tabs>
-        <TabList className="text-center mt-10 ">
+      <Tabs >
+        <TabList className="text-center mt-10 dara ">
           {props.nodes.map((data, i) => {
             return <Tab key={i}>{data.title}</Tab>;
           })}
