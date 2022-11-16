@@ -12,7 +12,6 @@ function Datas({ props }) {
             {collection?.image && (
               <Link key={i} to={`/collections/${collection.handle}`}>
                 <Image
-                  // width={"10%"}
                   alt={`Image of ${collection.title}`}
                   data={collection.image}
                 />
