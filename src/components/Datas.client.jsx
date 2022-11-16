@@ -12,18 +12,19 @@ function Datas({ props }) {
             {collection?.image && (
               <Link key={i} to={`/collections/${collection.handle}`}>
                 <Image
-                  className="object-cover items-center h-screen"
+                  // width={"10%"}
                   alt={`Image of ${collection.title}`}
                   data={collection.image}
                 />
+            <div className="custom">
+              {collection.title}
+            </div>
               </Link>
             )}
-            
           </>
         );
       })}
     </AwesomeSlider>
-  
   );
 }
 export default Datas;

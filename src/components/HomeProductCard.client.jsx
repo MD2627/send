@@ -151,7 +151,7 @@ function ProductGridOptions({ name, values }) {
             className={`rounded-full leading-none border-b-[2px] py-1 cursor-pointer transition-all duration-200 border-2 ${
               checked ? "border-black" : "border-transparent"
             }`}
-            style={{ backgroundColor: value, width: "35px", height: "35px" }}
+            style={{ backgroundColor: value, width: "20px", height: "20px" }}
           ></div>
         </label>
       );

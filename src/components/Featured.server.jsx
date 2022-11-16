@@ -1,5 +1,6 @@
 import { Link, Image, gql, useShopQuery, CacheLong } from "@shopify/hydrogen";
 import Datas from "./Datas.client";
+import Tabin from "./Tabin.client";
 
 export default function Featured() {
   const {
@@ -10,7 +11,10 @@ export default function Featured() {
   });
 
   return (
+    <>
     <Datas props= {collections}/>
+    <Tabin props={collections}/>
+    </>
   );
 }
 
