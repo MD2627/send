@@ -12,14 +12,14 @@ export default function Featured() {
 
   return (
     <>
-    <Datas props= {collections}/>
-    <Tabin props={collections}/>
+      <Datas props={collections} />
+      <Tabin props={collections} />
     </>
   );
 }
 
 const QUERY = gql`
-  query Featured {
+  query FeaturedCollections {
     collections(first: 3, sortKey: UPDATED_AT) {
       nodes {
         id
@@ -30,6 +30,23 @@ const QUERY = gql`
           width
           height
           url
+        }
+        products(first: 100) {
+          nodes {
+            id
+            title
+            vendor
+            handle
+            descriptionHtml
+            images(first: 1) {
+              nodes {
+                url
+                altText
+                width
+                height
+              }
+            }
+          }
         }
       }
     }

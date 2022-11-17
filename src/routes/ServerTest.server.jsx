@@ -10,7 +10,6 @@ import {
 } from "@shopify/hydrogen";
 import { Suspense } from "react";
 import HomeProductCard from "../components/HomeProductCard.client";
-import Tabin from "../components/Tabin.client";
 
 export default function ServerTest() {
   const {
