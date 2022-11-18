@@ -29,7 +29,7 @@ export default function Modal({ product }) {
         <button
           type="button"
           onClick={openModal}
-          className="bg-violet-400 text-white inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none w-full uppercase mt-3"
+          className="bg-gray-900 text-white inline-block rounded-sm font-medium text-center py-3 px-6 max-w-xl leading-none w-full uppercase mt-3"
         >
           Quick View {product.title}
         </button>
