@@ -23,8 +23,8 @@ function Tabin({ props }) {
                         return (
                           <Image
                             className="rounded flex align-center aspect-[5/4] md:aspect-[3/2] object-cover"
-                            width={"60%"}
-                            height={"30%"}
+                            width={"300px"}
+                            height={"250px"}
                             alt={`Image of ${img.title}`}
                             data={img}
                           />

@@ -60,7 +60,7 @@ function IconBag() {
 }
 
 function CartBadge({ dark }) {
-  const { totalQuantity ,status} = useCart();
+  const { totalQuantity, status } = useCart();
   if (totalQuantity < 1) {
     return null;
   }
