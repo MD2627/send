@@ -6,18 +6,19 @@ function Tabin({ props }) {
   return (
     <>
       <Tabs>
-        <TabList className="text-center mt-10 dara">
+        <TabList className="text-center mt-10 dara font-bold">
           {props.nodes.map((data, i) => {
             return <Tab key={i}>{data.title}</Tab>;
           })}
         </TabList>
         {props.nodes.map((data, i) => {
           return (
-            <TabPanel>
+            <TabPanel >
               {data.products.nodes.slice(0, 3).map((head) => {
                 return (
                   <>
                     <Link className="two" key={i} to={`/products/${head.handle}`}>
+                      <div className="text-center mb-5 font-bold">{head.title}</div>
                       {head.images.nodes.map((img) => {
                         return (
                           <Image
@@ -29,7 +30,6 @@ function Tabin({ props }) {
                           />
                         );
                       })}
-                      <div className="text-center">{head.title}</div>
                     </Link>
                   </>
                 );
