@@ -17,3 +17,14 @@
 .dara{
     border-bottom: 1px solid black;
 }
+
+
+.react-tabs__tab-panel {
+    display: flex !important;
+}
+.two{
+    align-items: center;
+    display: flex !important;
+    flex-direction: column ;
+    padding: 20px;
+}

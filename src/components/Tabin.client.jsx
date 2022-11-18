@@ -13,27 +13,23 @@ function Tabin({ props }) {
         </TabList>
         {props.nodes.map((data, i) => {
           return (
-            <TabPanel className="flex">
-              {data.products.nodes.map((head) => {
+            <TabPanel>
+              {data.products.nodes.slice(0, 3).map((head) => {
                 return (
                   <>
-                    <Link key={i} to={`/products/${head.handle}`}>
-                      <div className="flex">
-                        <div>
-                          {head.images.nodes.map((img) => {
-                            return (
-                              <Image
-                                className="rounded shadow-border overflow-clip inline-block aspect-[5/4] md:aspect-[3/2] object-cover"
-                                width={"30%"}
-                                height={"30%"}
-                                alt={`Image of ${img.title}`}
-                                data={img}
-                              />
-                            );
-                          })}
-                          {head.title}
-                        </div>
-                      </div>
+                    <Link className="two" key={i} to={`/products/${head.handle}`}>
+                      {head.images.nodes.map((img) => {
+                        return (
+                          <Image
+                            className="rounded flex align-center aspect-[5/4] md:aspect-[3/2] object-cover"
+                            width={"60%"}
+                            height={"30%"}
+                            alt={`Image of ${img.title}`}
+                            data={img}
+                          />
+                        );
+                      })}
+                      <div className="text-center">{head.title}</div>
                     </Link>
                   </>
                 );
